@@ -39,6 +39,9 @@
     <modules>
         <module>gae-166</module>
         <module>gae-170</module>
+        <module>gae-171</module>
+        <module>gae-172</module>
+        <module>gae-173</module>
         <module>gae-174</module>
     </modules>
 
