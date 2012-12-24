@@ -11,12 +11,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.capedwarf.versions</groupId>
-    <artifactId>gae-174</artifactId>
-    <name>CapeDwarf - GAE 1.7.4</name>
+    <artifactId>gae-166</artifactId>
+    <name>CapeDwarf - GAE 1.6.6</name>
     <packaging>jar</packaging>
 
     <properties>
-        <version.com.google.appengine>1.7.4</version.com.google.appengine>
+        <version.com.google.appengine>1.6.6</version.com.google.appengine>
     </properties>
 
     <build>

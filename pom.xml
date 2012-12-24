@@ -37,6 +37,7 @@
     </properties>
 
     <modules>
+        <module>gae-166</module>
         <module>gae-170</module>
         <module>gae-174</module>
     </modules>

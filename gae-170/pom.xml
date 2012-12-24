@@ -36,7 +36,6 @@
                             <includeGroupIds>org.jboss.capedwarf.blue</includeGroupIds>
                             <includeTypes>test-jar</includeTypes>
                             <includeScope>test</includeScope>
-                            <excludes>arquillian.xml</excludes>
                             <outputDirectory>${project.build.directory}/test-classes</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>true</overWriteSnapshots>
