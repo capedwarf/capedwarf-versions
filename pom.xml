@@ -26,6 +26,7 @@
         <version.arquillian>1.0.3.Final</version.arquillian>
         <version.shrinkwrap>1.1.0</version.shrinkwrap>
         <version.shrinkwrap.maven-resolver>2.0.0-alpha-4</version.shrinkwrap.maven-resolver>
+        <version.arquillian.gae>1.0.0.Alpha3</version.arquillian.gae>
         <!-- Needs to be set explicitely to match with org.jacoco:org.jacoco.ant - see testsuite. -->
         <version.xml.maven.plugin>1.0</version.xml.maven.plugin>
         <!-- Maven plugins -->
@@ -420,6 +421,13 @@
                 <scope>provided</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.jboss.arquillian.container</groupId>
+                <artifactId>arquillian-gae-local</artifactId>
+                <version>${version.arquillian.gae}</version>
+                <scope>test</scope>
+            </dependency>
+
             <!-- Testsuite -->
 
             <dependency>
@@ -472,5 +480,45 @@
 
         </dependencies>
     </dependencyManagement>
+
+
+    <profiles>
+        <!-- Default, compile tests, but not run -->
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.as</groupId>
+                    <artifactId>jboss-as-arquillian-container-remote</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.logging</groupId>
+                    <artifactId>jboss-logging</artifactId>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <!-- GAE -->
+        <profile>
+            <id>gae</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+                <property>
+                    <name>appengine.sdk.root</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-gae-local</artifactId>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 
 </project>
