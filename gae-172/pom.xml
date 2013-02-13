@@ -52,7 +52,7 @@
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                     <groups>org.jboss.test.capedwarf.common.support.GAE</groups>
                     <includes>
-                        <include>org/jboss/test/**/*TestCase.java</include>
+                        <include>org/jboss/test/**/*Test.java</include>
                     </includes>
                 </configuration>
             </plugin>
