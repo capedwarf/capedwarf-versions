@@ -50,7 +50,7 @@
                 <configuration>
                     <runOrder>alphabetical</runOrder>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                    <groups>org.jboss.test.capedwarf.common.support.GAE</groups>
+                    <!-- groups>org.jboss.test.capedwarf.common.support.GAE</groups -->
                     <includes>
                         <include>org/jboss/test/**/*Test.java</include>
                     </includes>

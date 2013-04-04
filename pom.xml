@@ -18,6 +18,7 @@
         <version.org.jboss.capedwarf>1.0.0-SNAPSHOT</version.org.jboss.capedwarf>
         <!-- AS -->
         <version.jboss.as>7.2.0.Final</version.jboss.as>
+        <version.org.jboss.xnio>3.0.7.GA</version.org.jboss.xnio>
         <!-- GAE -->
         <version.arquillian.gae>1.0.0.Alpha8</version.arquillian.gae>
         <!-- ARQ -->
@@ -407,6 +408,13 @@
             </dependency>
 
             <dependency>
+                <groupId>org.jboss.xnio</groupId>
+                <artifactId>xnio-api</artifactId>
+                <version>${version.org.jboss.xnio}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.jboss.spec.javax.servlet</groupId>
                 <artifactId>jboss-servlet-api_3.0_spec</artifactId>
                 <version>${version.org.jboss.spec.javax.servlet.api}</version>
@@ -479,6 +487,11 @@
                 <dependency>
                     <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-arquillian-container-remote</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.xnio</groupId>
+                    <artifactId>xnio-api</artifactId>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
